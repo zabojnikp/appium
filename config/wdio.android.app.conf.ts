@@ -23,7 +23,7 @@ config.capabilities = [
         // This is `appium:` for all Appium Capabilities which can be found here
         'appium:deviceName': 'Pixel4_34',
         'appium:platformVersion': '34',
-        'appium:udid': 'emulator-5556',
+        'appium:udid': 'emulator-5554',
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UiAutomator2',
         // The path to the app
