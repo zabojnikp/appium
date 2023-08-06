@@ -1,37 +1,14 @@
-import Page from './page';
-import Gestures from '../helpers/gestures';
+// locators
+const introHeader = '//android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.HorizontalScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView';
+const skipButton = '//android.view.ViewGroup/android.view.ViewGroup[8]/android.widget.TextView';
 
-const SKIP = 'Přeskočit';
-const HEADER = 'S APLIKACÍ MŮJ ALBERT UŠETŘÍTE VŽDY NEJVÍC';
-const LOGIN = 'Přihlásit se';
+// methods
+export const assertPageLoaded = async () => {
+    await expect($(introHeader)).toHaveTextContaining('S APLIKACÍ MŮJ ALBERT');
+    await expect($(introHeader)).toExist();
+};
 
-class IntroPage  {
-
-    async assertIntroPageDisplayed () {
-        await Page.assertTextViewDisplayed(SKIP);
-        await Page.assertTextViewDisplayed(HEADER);
-    }
-
-    async swipeRight () {
-        await Gestures.swipeRight();
-    }
-
-    async assertNextCardDisplayed (text: string) {
-        await Page.assertTextViewDisplayed(text);
-
-    }
-
-    async selectSkipButton () {
-        (await Page.getTextViewElement(SKIP)).click();
-    }
-
-    async assertLoginButtonDisplayed () {
-        (await Page.assertTextViewDisplayed(LOGIN));
-    }
-
-    async clickLoginButton () {
-        (await Page.getTextViewElement(LOGIN)).click();
-    }
-}
-
-export default new IntroPage();
+export const clickSkipButton = async () => {
+    await expect($(skipButton)).toHaveTextContaining('Přeskočit');
+    await $(skipButton).click();
+};
