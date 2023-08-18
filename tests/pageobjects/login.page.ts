@@ -1,6 +1,7 @@
 // import Page from './page';
 
 // const INTRO = 'VÍTEJTE V APLIKACI MŮJ ALBERT';
+//123
 // const LOGIN = 'Přihlásit se';
 // const USE_WITHOUT_ACCOUNT = 'Pokračovat bez účtu';
 // const CREATE_NEW_ACCOUNT = 'Vytvořit nový účet';
