@@ -1,7 +1,6 @@
 // locators
 const titleElement = '//android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.widget.TextView[1]';
 const acceptButton = '//android.view.ViewGroup[@content-desc="TrackingConsentScreen:AcceptAll"]';
-//const zmena = 'llll'
 
 // methods
 export const assertPageLoaded = async () => {

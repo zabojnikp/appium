@@ -27,7 +27,7 @@ config.capabilities = [
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UiAutomator2',
         // The path to the app
-        'appium:app': join(process.cwd(), './apps/app-dev-release-bitrise-signed.apk'),
+        'appium:app': join(process.cwd(), './apps/app-stage-release-bitrise-signed.apk'),
         // @ts-ignore
         'appium:newCommandTimeout': 240,
     },
